@@ -43,10 +43,26 @@
         /* Styling for the role cards */
         .role-card {
             border-left: 4px solid;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.3s ease;
+            /* Ensure text inside the card can wrap */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
-        .role-card:hover {
-            box-shadow: 0 4px 10px rgba(122, 162, 247, 0.2);
+        
+        /* Custom scrollbar for better look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #242838;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #414868;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #565f89;
         }
     </style>
 </head>

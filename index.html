@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Social Deduction Game Guide</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for dark theme and typography */
@@ -43,26 +42,10 @@
         /* Styling for the role cards */
         .role-card {
             border-left: 4px solid;
-            transition: box-shadow 0.3s ease;
-            /* Ensure text inside the card can wrap */
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+            transition: box-shadow 0.2s;
         }
-        
-        /* Custom scrollbar for better look in dark mode */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #242838;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #414868;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #565f89;
+        .role-card:hover {
+            box-shadow: 0 4px 10px rgba(122, 162, 247, 0.2);
         }
     </style>
 </head>
@@ -73,11 +56,9 @@
         
         <header class="mb-8 border-b border-gray-700 pb-4">
             <h1 class="text-4xl font-extrabold text-[#c0caf5] mb-2">The Town's Handbook</h1>
-            <!-- Updated header to reflect GM-hosted game -->
             <p class="text-gray-400">A comprehensive guide to roles, strategy, and game flow, hosted and managed by our GameMasters.</p>
         </header>
 
-        <!-- Main Tab Navigation -->
         <div id="main-tabs-nav" class="flex flex-wrap gap-2 p-2 bg-[#2a2f43] rounded-lg shadow-inner mb-6">
             <button onclick="openTab('Roles')" class="tab-link p-3 flex-1 text-center text-[#c0caf5] hover:bg-[#3b4261] transition-colors rounded-lg active-tab" data-tab-name="Roles">
                 Roles
@@ -90,15 +71,12 @@
             </button>
         </div>
 
-        <!-- Main Tab Content -->
         <div id="tab-content-container" data-tab-group="main">
             
-            <!-- 1. Roles Tab Content -->
             <div id="Roles" class="tab-content p-4 bg-[#2a2f43] rounded-xl shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">Role Categories</h2>
                 <p class="text-gray-300 mb-6">Every player belongs to one of three major factions. Understanding your faction's goal is key to victory.</p>
 
-                <!-- Sub-Tab Navigation (Faction Tabs) -->
                 <div id="sub-tabs-nav" class="flex flex-wrap gap-2 p-2 bg-[#1a1b26] rounded-lg shadow-md mb-6">
                     <button onclick="openSubTab('Town')" class="sub-tab-link p-3 text-center text-green-400 hover:bg-[#3b4261] transition-colors rounded-lg active-tab" data-tab-name="Town">
                         Town (Good)
@@ -111,15 +89,12 @@
                     </button>
                 </div>
                 
-                <!-- Sub-Tab Content -->
                 <div id="sub-tab-content-container" data-tab-group="sub">
 
-                    <!-- Town Faction -->
                     <div id="Town" class="sub-tab-content p-4 bg-[#3b4261] rounded-lg">
                         <h3 class="text-xl font-semibold text-green-300 mb-4">The Town Faction</h3>
                         <p class="text-gray-300 mb-6">The Town must work together to find and execute all members of the Mafia and any harmful Neutrals.</p>
 
-                        <!-- Sub-Sub-Tab Navigation (Town Sub-Categories) -->
                         <div id="sub-sub-tabs-nav-town" class="flex flex-wrap gap-2 mb-4">
                             <button onclick="openSubSubTab('Investigative')" class="sub-sub-tab-link-town p-2 text-sm text-green-200 bg-green-700/30 hover:bg-green-700/50 transition-colors rounded-md active-tab" data-tab-name="Investigative">Investigative</button>
                             <button onclick="openSubSubTab('Protective')" class="sub-sub-tab-link-town p-2 text-sm text-green-200 bg-green-700/30 hover:bg-green-700/50 transition-colors rounded-md" data-tab-name="Protective">Protective</button>
@@ -127,13 +102,10 @@
                             <button onclick="openSubSubTab('Killing')" class="sub-sub-tab-link-town p-2 text-sm text-green-200 bg-green-700/30 hover:bg-green-700/50 transition-colors rounded-md" data-tab-name="Killing">Killing</button>
                         </div>
 
-                        <!-- Sub-Sub-Tab Content -->
                         <div id="sub-sub-tab-content-container" data-tab-group="sub-sub-town">
                             
-                            <!-- INVESTIGATIVE ROLES -->
                             <div id="Investigative" class="sub-sub-tab-content p-3 border border-green-700/50 rounded-lg bg-green-900/10 space-y-4">
                                 
-                                <!-- INVESTIGATOR ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
                                     <h4 class="text-xl font-bold text-green-300 flex items-center mb-2">
                                         Investigator
@@ -141,52 +113,43 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A private eye who secretly gathers information.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Lynch every criminal and evildoer.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role has the ability to search a player's house, gaining a clue on their role.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-green-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Share your findings with the Town. Keep track of what you investigate and be prepared to defend your claims. You are a high-priority target for the Mafia!</p>
                                     </div>
                                 </div>
 
-                                <!-- Placeholder for other Investigative roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-green-700/50">More Investigative roles (Spy, Lookout, Sheriff) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- PROTECTIVE ROLES -->
                             <div id="Protective" class="sub-sub-tab-content p-3 border border-green-700/50 rounded-lg bg-green-900/10 space-y-4">
                                 
-                                <!-- DOCTOR ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
                                     <h4 class="text-xl font-bold text-green-300 flex items-center mb-2">
                                         Doctor
@@ -194,52 +157,43 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A surgeon skilled in trauma care who secretly heals people.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Lynch every criminal and evildoer.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role has the ability to heal one person at night, granting them powerful defense.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-green-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Protect players who have shared useful information. If you reveal your role, the Mafia might try to trick you into healing them, or target you next. Coordinating with other protective roles can prove beneficial.</p>
                                     </div>
                                 </div>
                                 
-                                <!-- Placeholder for other Protective roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-green-700/50">More Protective roles (Bodyguard, Crusader) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- SUPPORT ROLES -->
                             <div id="Support" class="sub-sub-tab-content p-3 border border-green-700/50 rounded-lg bg-green-900/10 space-y-4">
                                 
-                                <!-- TAVERN KEEPER ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
                                     <h4 class="text-xl font-bold text-green-300 flex items-center mb-2">
                                         Tavern Keeper
@@ -247,52 +201,43 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A bartender who keeps their guests distracted.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Lynch every criminal and evildoer.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role can offer a drink to a player at night.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-green-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">You cannot roleblock the same player twice, so use your ability carefully. Try to guess which mafia member may be killing on certain nights and roleblock them. Roleblocking the wrong person could be devastating to the town.</p>
                                     </div>
                                 </div>
 
-                                <!-- Placeholder for other Support roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-green-700/50">More Support roles (Escort, Retributionist) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- KILLING ROLES -->
                             <div id="Killing" class="sub-sub-tab-content p-3 border border-green-700/50 rounded-lg bg-green-900/10 space-y-4">
                                 
-                                <!-- VIGILANTE ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
                                     <h4 class="text-xl font-bold text-green-300 flex items-center mb-2">
                                         Vigilante
@@ -300,68 +245,56 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A militant cop who takes the law into their own hands.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Lynch every criminal and evildoer.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-green-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role can attack a player 3 times per game, dealing a basic attack to their target. The Vigilante cannot do this night 1, unless controlled.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-green-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-green-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Do not shoot randomly! If you shoot a Town member, you will die of guilt the next night. Only shoot players who are confirmed evil (by an Investigator or other reliable source).</p>
                                     </div>
                                 </div>
 
-                                <!-- Placeholder for other Killing roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-green-700/50">More Killing roles (Veteran, Jailor) would be listed here using similar cards.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Mafia Faction -->
                     <div id="Mafia" class="sub-tab-content p-4 bg-[#3b4261] rounded-lg">
                         <h3 class="text-xl font-semibold text-red-300 mb-4">The Mafia Faction</h3>
                         <p class="text-gray-300 mb-6">The Mafia wins when they equal or outnumber the remaining Town members and Neutrals. They operate in a private chat at night.</p>
                         
-                        <!-- Sub-Sub-Tab Navigation (Mafia Sub-Categories) -->
                         <div id="sub-sub-tabs-nav-mafia" class="flex flex-wrap gap-2 mb-4">
                             <button onclick="openSubSubTab('MafiaKilling')" class="sub-sub-tab-link-mafia p-2 text-sm text-red-200 bg-red-700/30 hover:bg-red-700/50 transition-colors rounded-md active-tab" data-tab-name="MafiaKilling">Killing</button>
                             <button onclick="openSubSubTab('Deception')" class="sub-sub-tab-link-mafia p-2 text-sm text-red-200 bg-red-700/30 hover:bg-red-700/50 transition-colors rounded-md" data-tab-name="Deception">Deception</button>
                             <button onclick="openSubSubTab('MafiaSupport')" class="sub-sub-tab-link-mafia p-2 text-sm text-red-200 bg-red-700/30 hover:bg-red-700/50 transition-colors rounded-md" data-tab-name="MafiaSupport">Support</button>
                         </div>
                         
-                        <!-- Sub-Sub-Tab Content -->
                         <div id="sub-sub-tab-content-container-mafia" data-tab-group="sub-sub-mafia">
                             
-                            <!-- MAFIA KILLING ROLES -->
                             <div id="MafiaKilling" class="sub-sub-tab-content p-3 border border-red-700/50 rounded-lg bg-red-900/10 space-y-4">
-                                <!-- AMBUSHER ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
                                     <h4 class="text-xl font-bold text-red-300 flex items-center mb-2">
                                         Ambusher
@@ -369,50 +302,41 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A stealthy killer who lies in wait for the perfect moment to strike.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-red-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role has the ability to prepare an ambush outside of a player's house, attacking one non-mafia visitor. All visitors will learn who the Ambusher is.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-red-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Try to take out protective or investigative roles early, before the town has the chance to coordinate. Be careful not to visit someone who may have a lot of visitors, as you can only kill one, but all of them will learn your name.</p>
                                     </div>
                                 </div>
-                                <!-- Placeholder for other Mafia Killing roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-red-700/50">More Mafia Killing roles (Mafioso) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- DECEPTION ROLES -->
                             <div id="Deception" class="sub-sub-tab-content p-3 border border-red-700/50 rounded-lg bg-red-900/10 space-y-4">
-                                <!-- DISGUISER ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
                                     <h4 class="text-xl font-bold text-red-300 flex items-center mb-2">
                                         Disguiser
@@ -420,50 +344,41 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A master of disguise who can make people appear to be something they are not.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-red-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role may disguise themselves or a fellow mafia member as a role of their choosing. Alternatively, this role may frame a non-mafia player as a mafia role of their choosing.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-red-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Frame high-priority Town targets (like the Doctor) to confuse the Town when the Investigator shares their findings.</p>
                                     </div>
                                 </div>
-                                <!-- Placeholder for other Deception roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-red-700/50">More Deception roles (Disguiser, Forger) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- MAFIA SUPPORT ROLES -->
                             <div id="MafiaSupport" class="sub-sub-tab-content p-3 border border-red-700/50 rounded-lg bg-red-900/10 space-y-4">
-                                <!-- GODFATHER ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
                                     <h4 class="text-xl font-bold text-red-300 flex items-center mb-2">
                                         Godfather
@@ -471,55 +386,46 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">The leader of organized crime.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-red-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">When choosing to kill, the Godfather takes priority over the other mafia.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">This role may send a private message to another mafia member during the day, twice per day. There will be no public notification, and nobody else will be able to read the message.</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-red-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">The Sheriff will find you Innocent unless you have killed that night. You can use this as a means to gain the town's trust. Use your private messages to lead your teammates without drawing suspicion to yourself or risk your whispers being overheard.</p>
                                     </div>
                                 </div>
-                                <!-- Placeholder for other Mafia Support roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-red-700/50">More Mafia Support roles (Blackmailer) would be listed here using similar cards.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Neutral Faction -->
                     <div id="Neutral" class="sub-tab-content p-4 bg-[#3b4261] rounded-lg">
                         <h3 class="text-xl font-semibold text-yellow-300 mb-4">The Neutral Faction</h3>
                         <p class="text-gray-300 mb-6">Neutrals have diverse win conditions. They prioritize their own victory, often at the expense of others.</p>
                         
-                        <!-- Sub-Sub-Tab Navigation (Neutral Sub-Categories) -->
                         <div id="sub-sub-tabs-nav-neutral" class="flex flex-wrap gap-2 mb-4">
                             <button onclick="openSubSubTab('Benign')" class="sub-sub-tab-link-neutral p-2 text-sm text-yellow-200 bg-yellow-700/30 hover:bg-yellow-700/50 transition-colors rounded-md active-tab" data-tab-name="Benign">Benign</button>
                             <button onclick="openSubSubTab('Evil')" class="sub-sub-tab-link-neutral p-2 text-sm text-yellow-200 bg-yellow-700/30 hover:bg-yellow-700/50 transition-colors rounded-md" data-tab-name="Evil">Evil</button>
@@ -527,13 +433,10 @@
                             <button onclick="openSubSubTab('Chaos')" class="sub-sub-tab-link-neutral p-2 text-sm text-yellow-200 bg-yellow-700/30 hover:bg-yellow-700/50 transition-colors rounded-md" data-tab-name="Chaos">Chaos</button>
                         </div>
                         
-                        <!-- Sub-Sub-Tab Content -->
                         <div id="sub-sub-tab-content-container-neutral" data-tab-group="sub-sub-neutral">
                             
-                            <!-- NEUTRAL BENIGN ROLES -->
                             <div id="Benign" class="sub-sub-tab-content p-3 border border-yellow-700/50 rounded-lg bg-yellow-900/10 space-y-4">
                                 
-                                <!-- AMNESIAC ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-cyan-900/20 border-cyan-400">
                                     <h4 class="text-xl font-bold text-cyan-300 flex items-center mb-2">
                                         Amnesiac
@@ -541,52 +444,43 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A trauma patient that does not remember who they were.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-cyan-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-cyan-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Remember who you were and complete that role's goal.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-cyan-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-cyan-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-cyan-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-cyan-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role has the ability to become another role from the graveyard. They will not actually become the role until the day starts.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-cyan-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-cyan-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">It is publicly announced when Amnesiac remembers a role. Claiming to be the Amnesiac may make you the target of Town's lynching if you or another Amnesiac remembers an evil role. Other players may also threaten to kill you if you do not help them. Be careful who you trust.</p>
                                     </div>
                                 </div>
                                 
-                                <!-- Placeholder for other Neutral Benign roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-yellow-700/50">More Neutral Benign roles (Survivor, Amnesiac) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- NEUTRAL EVIL ROLES -->
                             <div id="Evil" class="sub-sub-tab-content p-3 border border-violet-700/50 rounded-lg bg-violet-900/10 space-y-4">
                                 
-                                <!-- WITCH ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-violet-900/20 border-violet-400">
                                     <h4 class="text-xl font-bold text-violet-300 flex items-center mb-2">
                                         Witch
@@ -594,52 +488,43 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A voodoo master who can control other peoples' actions.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-violet-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-violet-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Live to see Town lose the game.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-violet-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">Basic (Barrier)</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-violet-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-violet-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-violet-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role can control a player each night, forcing their victim to use their ability on a player of the Witch's choosing.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-violet-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-violet-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">You win with everyone but town, so making alliances with other players is your key to success. Use your ability to make openings for evil roles to kill off important town members, or to sow chaos by using the town's own killing power against them. Be aware that other players may not trust you, especially if rival evil factions exist, and that other players may betray you to save themselves.</p>
                                     </div>
                                 </div>
                                 
-                                <!-- Placeholder for other Neutral Evil roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-yellow-700/50">More Neutral Evil roles (Executioner) would be listed here using similar cards.</p>
                             </div>
 
-                            <!-- NEUTRAL KILLING ROLES -->
                             <div id="NeutralKilling" class="sub-sub-tab-content p-3 border border-blue-700/50 rounded-lg bg-blue-900/10 space-y-4">
                                 
-                                <!-- SERIAL KILLER ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-blue-900/20 border-blue-400">
                                     <h4 class="text-xl font-bold text-blue-300 flex items-center mb-2">
                                         Serial Killer
@@ -647,27 +532,23 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">A psychotic criminal who wants everyone to die..</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-blue-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-blue-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Kill everyone who opposes you.</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-blue-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-blue-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-blue-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
-                                        <div class="p-3 bg-blue-900/30 rounded-md">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-blue-900/30 rounded-md md:col-span-full">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">- This role can kill one player each night.</p>
                                             <p class="text-gray-400">- Every time the Serial Killer successfully kills a player, they gain Bloodlust.</p>
@@ -677,28 +558,23 @@
                                             <p class="text-gray-400">- If the Serial Killer attacks another Serial Killer, both players will know each other's roles and be able to talk to each other at night.</p>
                                             <p class="text-gray-400">- The Serial Killer will automatically kill anyone that roleblocks them. However, the Serial Killer may choose to be cautious and not kill roleblockers, as well as appearing innocent to the Sheriff, but will as a result lose their roleblock immunity and all bloodlust, and cannot gain more until Cautious is disabled.</p>
                                         </div>
-                                        <!-- DAY ACTION -->
-                                        <div class="p-3 bg-blue-900/30 rounded-md">
+                                        <div class="p-3 bg-blue-900/30 rounded-md md:col-span-full">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-blue-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Looking innocent is incredibly important, as the mafia wants you gone too, not just the town. Choose your targets carefully, and try to balance the factions so that neither can use their majority against you. Working with neutrals can give you an edge against evil factions.</p>
                                     </div>
                                 </div>
 
-                                <!-- Placeholder for other Neutral Killing roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-yellow-700/50">More Neutral Killing roles (Werewolf, Arsonist) would be listed here using similar cards.</p>
                             </div>
                             
-                            <!-- NEUTRAL CHAOS ROLES -->
                             <div id="Chaos" class="sub-sub-tab-content p-3 border border-pink-700/50 rounded-lg bg-pink-900/10 space-y-4">
                                 
-                                <!-- EXECUTIONER ROLE CARD -->
                                 <div class="role-card p-4 rounded-lg bg-gray-900/20 border-gray-400">
                                     <h4 class="text-xl font-bold text-gray-300 flex items-center mb-2">
                                         Executioner
@@ -706,45 +582,38 @@
                                     </h4>
                                     <p class="text-gray-400 italic mb-3">An obsessed lyncher who will stop at nothing to execute their target.</p>
                                     
-                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                                        <!-- GOAL -->
-                                        <div class="p-3 bg-gray-900/30 rounded-md sm:col-span-3">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-gray-900/30 rounded-md md:col-span-3">
                                             <p class="font-semibold text-gray-200 mb-1">Goal:</p>
                                             <p class="text-gray-400">Get your target lynched at any cost..</p>
                                         </div>
-                                        <!-- DEFENSE -->
                                         <div class="p-3 bg-gray-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
                                             <p class="text-gray-400">Basic</p>
                                         </div>
-                                        <!-- ATTACK -->
-                                        <div class="p-3 bg-gray-900/30 rounded-md sm:col-span-2">
+                                        <div class="p-3 bg-gray-900/30 rounded-md md:col-span-2">
                                             <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
-                                        <!-- NIGHT ACTION -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm mt-3">
                                         <div class="p-3 bg-gray-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">None</p>
                                         </div>
-                                        <!-- DAY ACTION -->
                                         <div class="p-3 bg-gray-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
                                             <p class="text-gray-400">If your target dies, you become a Jester.</p>
                                         </div>
                                     </div>
 
-                                    <!-- STRATEGY -->
                                     <div class="p-3 bg-gray-900/30 rounded-md mt-3">
                                         <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
                                         <p class="text-gray-400">Your only tool is your words. Claim to be an investigative role who found an evil player, or if you're feeling patient, wait until your target makes a claim and then contradict them. Sometimes, your target may be too difficult to hang, and you may have to ask for help from other neutrals or evils, or wait until your target dies and go on to win as a Jester.</p>
                                     </div>
                                 </div>
                                 
-                                <!-- Placeholder for other Neutral Chaos roles -->
                                 <p class="text-gray-400 italic text-sm pt-2 border-t border-yellow-700/50">More Neutral Chaos roles (Juggernaut) would be listed here using similar cards.</p>
                             </div>
                         </div>
@@ -753,7 +622,6 @@
 
             </div>
 
-            <!-- 2. Gameplay Tab Content -->
             <div id="Gameplay" class="tab-content p-4 bg-[#2a2f43] rounded-xl shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">Game Phases & Flow</h2>
                 <p class="text-gray-300 mb-4">The game alternates between the Night and Day phases until a winning condition is met.</p>
@@ -762,7 +630,6 @@
                     <p class="text-gray-200 font-medium mb-4">
                         Understanding the cycle is essential for strategic timing.
                     </p>
-                    <!-- Triggering the diagram -->
                     <p class="text-center text-lg font-semibold text-[#7aa2f7]">
                         
                     </p>
@@ -796,14 +663,12 @@
 
             </div>
 
-            <!-- 3. Tips & Tricks Tab Content -->
             <div id="TipsAndTricks" class="tab-content p-4 bg-[#2a2f43] rounded-xl shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">Mastering the Game</h2>
                 <div class="space-y-6 text-gray-300">
                     <div>
                         <h3 class="text-xl font-semibold text-green-300">For Town Players</h3>
                         <ul class="list-disc list-inside ml-4 space-y-2">
-                            <!-- Updated tip for GM-hosted game -->
                             <li><b>Communicate with GM:</b> If your role allows private communication, follow the GameMaster's instructions on how to submit your action or message a trusted player.</li>
                             <li><b>Claim Early, but Wisely:</b> Investigative roles (like Investigator or Sheriff) should claim early, as they are the Town's main source of information, but be aware the Mafia will target you. Not providing the town with important information may draw suspicion on you.</li>
                             <li><b>Gather Information:</b> Using trials to question quiet players is a great way to narrow down suspects faster, but be aware that someone who claims a role may be lying. Some players may claim early to avoid being put on trial later.</li>
@@ -856,7 +721,6 @@
         </div>
     </div>
 
-    <!-- JavaScript for Tab Management -->
     <script>
         // Set the initial state
         document.addEventListener('DOMContentLoaded', () => {

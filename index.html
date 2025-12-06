@@ -93,7 +93,7 @@
 
                     <div id="Town" class="sub-tab-content p-4 bg-[#3b4261] rounded-lg">
                         <h3 class="text-xl font-semibold text-green-300 mb-4">The Town Faction</h3>
-                        <p class="text-gray-300 mb-6">The Town must work together to find and execute all members of the Mafia and any harmful Neutrals.</p>
+                        <p class="text-gray-300 mb-6">The Town is the uninformed majority who must deduce and lynch all criminals and evildoers before it is too late.</p>
 
                         <div id="sub-sub-tabs-nav-town" class="flex flex-wrap gap-2 mb-4">
                             <button onclick="openSubSubTab('Investigative')" class="sub-sub-tab-link-town p-2 text-sm text-green-200 bg-green-700/30 hover:bg-green-700/50 transition-colors rounded-md active-tab" data-tab-name="Investigative">Investigative</button>
@@ -145,7 +145,206 @@
                                     </div>
                                 </div>
 
-                                <p class="text-gray-400 italic text-sm pt-2 border-t border-green-700/50">More Investigative roles (Spy, Lookout, Sheriff) would be listed here using similar cards.</p>
+                                <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
+                                    <h4 class="text-xl font-bold text-green-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Sheriff
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-green-500/20 text-green-300 px-2 py-0.5 rounded-full">Town (Investigative)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">The law enforcer of the town forced into hiding from threat of murder.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Lynch every criminal and evildoer.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role has the ability to interrogate one player at night.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3 bg-green-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">Many evils may appear to be innocent to you, or may have ways of making themselves or their allies appear innocent. Do not assume someone is a town member just because they seem to be innocent, and note that some roles can alter the results for innocent townies. Working with other investigative roles can allow you to deduce exactly what you're dealing with.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
+                                    <h4 class="text-xl font-bold text-green-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Lookout
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-green-500/20 text-green-300 px-2 py-0.5 rounded-full">Town (Investigative)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">An eagle-eyed observer, stealthily camping outside houses to gain information.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Lynch every criminal and evildoer.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role has the ability to watch a player's home at night. The Lookout will identify up to 3 people who visit their target that night.</p>
+                                            <p class="text-gray-400">- The Lookout will be notified if more than 3 players visit their target that night.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3 bg-green-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">While catching a killer in the act is great, it's more important to confirm innocent townies. Confirming someone was infact where they said they were is a great way to narrow down future suspects for the town. It's common for Lookouts to visit the Jailor and other powerful town roles to confirm any town protective roles. Unlike other investigative roles, you won't draw as much suspicion to yourself for not sharing information publicly, as you can use your information to call out a liar later.</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
+                                    <h4 class="text-xl font-bold text-green-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Tracker
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-green-500/20 text-green-300 px-2 py-0.5 rounded-full">Town (Investigative)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A skilled tracker who will follow their prey to any destination.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Lynch every criminal and evildoer.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role can track a player at night, learning who they visited that night.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3 bg-green-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">Unlike the lookout, you can specifically check where one person was, but cannot confirm if other players also visited the same target. Rather than trying to catch a player in the act, it may be a good idea to track players who claim to be a role that cannot visit. There's nothing a player claiming to be a Psychic can say to draw suspicion off of themself if they get seen visiting.</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
+                                    <h4 class="text-xl font-bold text-green-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Psychic
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-green-500/20 text-green-300 px-2 py-0.5 rounded-full">Town (Investigative)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A powerful seer with a gift for finding one's secrets.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Lynch every criminal and evildoer.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">On odd nights, the Psychic will receive the names of 3 players, one of which is guaranteed to be evil. This includes generally 'harmless' roles like Jester.</p>
+                                            <p class="text-gray-400">On even nights, the Psychic will receive the names of 2 players, one of which is guaranteed to be innocent. This includes Neutral Benign roles.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3 bg-green-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">You excel in forcing players who may have otherwise stayed silent to share information with the town. Push your suspected players to claim, so that you may figure out who is most likely to be evil. Note that finding an evil in your odd-night vision doesn't clear the other players, nor does finding an innocent in your even-night vision make the other player evil.</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-green-900/20 border-green-400">
+                                    <h4 class="text-xl font-bold text-green-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Spy
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-green-500/20 text-green-300 px-2 py-0.5 rounded-full">Town (Investigative)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A talented watcher who keeps track of evil in the Town.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Lynch every criminal and evildoer.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role may bug a player at night.</p>
+                                            <p class="text-gray-400">- The bug will last until triggered.</p>
+                                            <p class="text-gray-400">- Bugs are triggered when something happens to the bugged player. The Spy will be notified of everything that happened to the player that night.</p>
+                                            <p class="text-gray-400">- Bugs can be triggered by already-present status effects.</p>
+                                            <p class="text-gray-400">- Some roles will always show to have a status effect.</p>
+                                        </div>
+                                        <div class="p-3 bg-green-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">The Spy can read private whispers.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="p-3 bg-green-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">There can only be one spy. If someone else has information only you should have, they're gaurenteed to be evil. Claiming may not be wise, as your presence encourages evildoers to be more cautious. However, your information may also be vital to the town's success. Your role is very versatile and can be played in many ways.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div id="Protective" class="sub-sub-tab-content p-3 border border-green-700/50 rounded-lg bg-green-900/10 space-y-4">

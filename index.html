@@ -923,6 +923,7 @@
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
                                             <p class="text-gray-400">This role has the ability to prepare an ambush outside of a player's house, attacking one non-mafia visitor. All visitors will learn who the Ambusher is.</p>
+                                            <p class="text-gray-400">There may only be one Ambusher.</p>
                                         </div>
                                         <div class="p-3 bg-red-900/30 rounded-md">
                                             <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
@@ -935,7 +936,91 @@
                                         <p class="text-gray-400">Try to take out protective or investigative roles early, before the town has the chance to coordinate. Be careful not to visit someone who may have a lot of visitors, as you can only kill one, but all of them will learn your name.</p>
                                     </div>
                                 </div>
-                                <p class="text-gray-400 italic text-sm pt-2 border-t border-red-700/50">More Mafia Killing roles (Mafioso) would be listed here using similar cards.</p>
+
+                                <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
+                                    <h4 class="text-xl font-bold text-red-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Demolitionist
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Mafia (Killing)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">An artificer who uses their skills for terrorism.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">Basic</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">Twice per game, this role may visit another non-Mafia player at night to pass them a bomb.</p>
+                                            <p class="text-gray-400">- The player, upon recieving the bomb, may now pass it to another player via visiting them. This fails if the Demolitionist detonates the bomb that day or night, or if the target is protected by a Guardian Angel or Admirer. The bomb will be passed at the end of the night/day.</p>
+                                            <p class="text-gray-400">- At night, the player will pass the bomb to whoever they use their ability on. Roles that pick two targets may pick which target to pass the bomb to. Non-visiting roles gain the ability to visit in order to pass the bomb.</p>
+                                            <p class="text-gray-400">- There may only be one bomb present at a time. The Demolitionist will know who currently has the bomb.</p>
+                                            <p class="text-gray-400">- There may only be one Demolitionist.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">After one day, at any time, the Demolitionist may choose to detonate the bomb, which will explode at the end of the day/night with a warning.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-red-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">The town will often attempt to pick someone to be killed by the bomb. The bomb CAN be passed to a mafia member by any non-mafia player, which will allow you to coordinate exactly who you want to kill. Try to manipulate the town into placing the bomb where you'd like, or use the chaos you cause to your advantage. Be careful who you initially pass the bomb to, as if the player the bomb is passed to dies the same night, the bomb will be gone.</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
+                                    <h4 class="text-xl font-bold text-red-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Kidnapper
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Mafia (Killing)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A corrupt prison guard who detains people in their basement.</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">Powerful</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">The Kidnapper may talk anonymously with a kidnapped player, and will appear to be a Jailor. The player will be unable to talk in any team private chats. ALL messages sent will be seen by both the mafia and the kidnapped player.</p>
+                                            <p class="text-gray-400">- The Kidnapper may choose to exterminate the player once per game. The death will appear to have been from a Jailor.</p>
+                                            <p class="text-gray-400">- The Kidnapper cannot jail the Jailor, or any player elected as Mayor, no matter their role. However, the Kidnapper can be jailed.</p>
+                                            <p class="text-gray-400">- There can only be one Kidnapper..</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">This role may choose one person during the day to kidnap the following night. The kidnapped player will not be able to preform any night actions. The Kidnapper may only do this three times.</p>
+                                            <p class="text-gray-400">- The Kidnapper cannot kidnap fellow mafia members.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-red-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">In most cases, pretending to be the jailor during the day is a bad idea, as the real jailor can and will execute you. Even if there is no jailor, you do not have as much capability as a jailor, and the town will likely notice your lack of action. Instead, when you kidnap someone, use your anonymity to attempt to gain extra information that the mafia would not normally have. You're better off using your execute as simply an extra kill for the mafia rather than a deceptive play. (KIDNAPPER SHOULD BE PLAYED IN VERY DIFFERENT WAYS DEPENDING ON THE GAMEMODE!)</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div id="Deception" class="sub-sub-tab-content p-3 border border-red-700/50 rounded-lg bg-red-900/10 space-y-4">

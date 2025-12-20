@@ -886,7 +886,7 @@
                     
                     <div id="Mafia" class="sub-tab-content p-4 bg-[#3b4261] rounded-lg">
                         <h3 class="text-xl font-semibold text-red-300 mb-4">The Mafia Faction</h3>
-                        <p class="text-gray-300 mb-6">The Mafia wins when they equal or outnumber the remaining Town members and Neutrals. They operate in a private chat at night.</p>
+                        <p class="text-gray-300 mb-6">The Mafia wins when everyone who would oppose them is dead. They operate in a private chat at night and have abilities designed for deception and coordination.</p>
                         
                         <div id="sub-sub-tabs-nav-mafia" class="flex flex-wrap gap-2 mb-4">
                             <button onclick="openSubSubTab('MafiaKilling')" class="sub-sub-tab-link-mafia p-2 text-sm text-red-200 bg-red-700/30 hover:bg-red-700/50 transition-colors rounded-md active-tab" data-tab-name="MafiaKilling">Killing</button>
@@ -1062,7 +1062,125 @@
                                         <p class="text-gray-400">Frame high-priority Town targets (like the Doctor) to confuse the Town when the Investigator shares their findings.</p>
                                     </div>
                                 </div>
-                                <p class="text-gray-400 italic text-sm pt-2 border-t border-red-700/50">More Deception roles (Disguiser, Forger) would be listed here using similar cards.</p>
+
+                                <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
+                                    <h4 class="text-xl font-bold text-red-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Janitor
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Mafia (Deception)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A master of disguise who can make people appear to be something they are not.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">Basic</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role can clean a player's house at night. The Janitor can only do this 3 times. If the player dies, their role and last will is hidden.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">The Janitor will be informed of the player's role and last will.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-red-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">Your best use is suppressing information. While you usually don't have to think about who to clean (just clean the kill volunteer's target, duh) you SHOULD be careful when you do so. If the volunteer fails to kill the target, your ability will be wasted, or you could even risk your own death if the target happens to be a veteran, or the target of a rampaging Neutral Killing role like Werewolf. To cause more confusion, you can try to predict who other evil roles will attempt to kill, albeit this method is less reliable. Claiming to be the role you cleaned isn't always a good idea, as you might not be able to keep up the fakeclaim, or the player's role may have already been known and you will be called out.</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
+                                    <h4 class="text-xl font-bold text-red-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Forger
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Mafia (Deception)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A crooked lawyer that replaces documents.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">Basic</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role can forge a player's documents. If the player dies that night, their shown role/last will is replaced with what the Forger selected. The Forger can do this 2 times.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-red-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">You are NOT just a worse janitor, and should not use your ability as such! You're capable of setting yourself or your teammates up for the perfect fakeclaim, or incriminating an innocent town member without putting yourself at risk. Forging someone who has already claimed is not usually wise, though you can alter their will to say something that benefits you. Note that if there's a medium, the dead chat will likely call out any obvious patterns!</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-red-900/20 border-red-400">
+                                    <h4 class="text-xl font-bold text-red-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Hypnotist
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full">Mafia (Deception)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A skilled hypnotist who can alter the perception of others.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Kill anyone who will not submit to the Mafia.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">Basic</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role can plant a memory on another player, giving them a false notification of the Hypnotist's choosing.</p>
+                                        </div>
+                                        <div class="p-3 bg-red-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-red-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">You can mimic ANY possible notification, but your actions do not overwrite any real notifications. An investigative role will know they weren't actually roleblocked if they successfully gained information, for example. Use your ability wisely to either sow confusion or back up your teammates' (or even your own) claims, but be aware that a single contradiction in notifications can expose the entire plan.</p>
+                                    </div>
+                                </div>
+
+                                
                             </div>
 
                             <div id="MafiaSupport" class="sub-sub-tab-content p-3 border border-red-700/50 rounded-lg bg-red-900/10 space-y-4">

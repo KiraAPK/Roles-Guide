@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trials By Fire Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+	tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        beige: {
+                            50: ({ opacityValue }) => opacityValue ? `oklch(0.96 0.00 78 / ${opacityValue})` : 'oklch(0.96 0.00 78)',
+                            100: ({ opacityValue }) => opacityValue ? `oklch(0.90 0.01 80 / ${opacityValue})` : 'oklch(0.90 0.01 80)',
+                            200: ({ opacityValue }) => opacityValue ? `oklch(0.83 0.02 85 / ${opacityValue})` : 'oklch(0.83 0.02 85)',
+                            300: ({ opacityValue }) => opacityValue ? `oklch(0.77 0.03 84 / ${opacityValue})` : 'oklch(0.77 0.03 84)',
+                            400: ({ opacityValue }) => opacityValue ? `oklch(0.70 0.04 83 / ${opacityValue})` : 'oklch(0.70 0.04 83)',
+                            500: ({ opacityValue }) => opacityValue ? `oklch(0.63 0.05 82 / ${opacityValue})` : 'oklch(0.63 0.05 82)',
+                            600: ({ opacityValue }) => opacityValue ? `oklch(0.54 0.04 83 / ${opacityValue})` : 'oklch(0.54 0.04 83)',
+                            700: ({ opacityValue }) => opacityValue ? `oklch(0.46 0.03 83 / ${opacityValue})` : 'oklch(0.46 0.03 83)',
+                            800: ({ opacityValue }) => opacityValue ? `oklch(0.37 0.02 84 / ${opacityValue})` : 'oklch(0.37 0.02 84)',
+                            900: ({ opacityValue }) => opacityValue ? `oklch(0.27 0.02 87 / ${opacityValue})` : 'oklch(0.27 0.02 87)',
+                            950: ({ opacityValue }) => opacityValue ? `oklch(0.16 0.01 78 / ${opacityValue})` : 'oklch(0.16 0.01 78)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         /* Custom styles for dark theme and typography */
         body {
@@ -1565,9 +1588,89 @@
                                     </div>
                                 </div>
                                 
-                                <p class="text-gray-400 italic text-sm pt-2 border-t border-yellow-700/50">More Neutral Evil roles (Executioner) would be listed here using similar cards.</p>
-                            </div>
+                                <div class="role-card p-4 rounded-lg bg-emerald-950/20 border-emerald-400">
+                                    <h4 class="text-xl font-bold text-emerald-400 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Changeling
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-emerald-600/20 text-emerald-700 px-2 py-0.5 rounded-full">Neutral (Evil)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A fae who consumes and replaces others to sow chaos.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-emerald-950/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Live to see Town lose the game.</p>
+                                        </div>
+                                        <div class="p-3 bg-emerald-950/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">Basic</p>
+                                        </div>
+                                        <div class="p-3 bg-emerald-950/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">Unstoppable</p>
+                                        </div>
+                                    </div>
 
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-emerald-950/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role must choose a target as soon as possible. If they do not, one will be chosen at random. This player cannot be a Vampire, Neutral Benign, Jester or Executioner. The target will be dealt an unstoppable attack. The Changeling then gains the stats, abilities and investigative results of this player, only bypassed by roles that cannot be fooled.</p>
+					    <p class="text-gray-400">- There can only be one Changeling.</p>
+                                        </div>
+                                        <div class="p-3 bg-emerald-950/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-emerald-950/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">Chances are, you won't get enough information to choose a good target. Just make do with what you get!</p>
+                                    </div>
+                                </div>
+
+                                <div class="role-card p-4 rounded-lg bg-beige-900/20 border-beige-400">
+                                    <h4 class="text-xl font-bold text-beige-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Auditor
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-beige-500/20 text-beige-300 px-2 py-0.5 rounded-full">Neutral (Evil)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">A corrupt tax collector who uses their status and connections for evil.</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-beige-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Live to see Town lose the game.</p>
+                                        </div>
+                                        <div class="p-3 bg-beige-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">Basic (Barrier)</p>
+                                        </div>
+                                        <div class="p-3 bg-beige-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-beige-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role has two main abilities: Audit and Smokebomb. The Auditor may choose which ability to use.</p>
+					    <p class="text-gray-400">- Auditing a player roleblocks them and removes 1 ability charge. The Auditor will learn the victim's role, regardless of whether or not it was successful.</p>
+					    <p class="text-gray-400">- Using a smokebomb on a player obscures all feedback, preventing visitors from getting results. The Auditor will learn the victim's role.</p>
+					    <p class="text-gray-400">- The Auditor may choose to smokebomb the jailor if jailed.</p>
+                                        </div>
+                                        <div class="p-3 bg-beige-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-beige-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">You're a master of disrupting information for the town. Prioritize keeping investigative roles from gathering information.</p>
+                                    </div>
+                                </div>
+
+                            </div>
                             <div id="NeutralKilling" class="sub-sub-tab-content p-3 border border-blue-700/50 rounded-lg bg-blue-900/10 space-y-4">
                                 
                                 <div class="role-card p-4 rounded-lg bg-blue-900/20 border-blue-400">

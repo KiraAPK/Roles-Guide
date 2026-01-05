@@ -24,6 +24,19 @@
                             900: ({ opacityValue }) => opacityValue ? `oklch(0.27 0.02 87 / ${opacityValue})` : 'oklch(0.27 0.02 87)',
                             950: ({ opacityValue }) => opacityValue ? `oklch(0.16 0.01 78 / ${opacityValue})` : 'oklch(0.16 0.01 78)',
                         }
+						"lavendar": {
+						    50: ({ opacityValue }) => opacityValue ? `oklch(0.96 0.01 311/ ${opacityValue})` : 'oklch(0.96 0.01 311)',
+						    100: ({ opacityValue }) => opacityValue ? `oklch(0.88 0.03 311/ ${opacityValue})` : 'oklch(0.88 0.03 311)',
+						    200: ({ opacityValue }) => opacityValue ? `oklch(0.76 0.06 311/ ${opacityValue})` : 'oklch(0.76 0.06 311)',
+						    300: ({ opacityValue }) => opacityValue ? `oklch(0.71 0.07 311/ ${opacityValue})` : 'oklch(0.71 0.07 311)',
+						    400: ({ opacityValue }) => opacityValue ? `oklch(0.63 0.10 311/ ${opacityValue})` : 'oklch(0.63 0.10 311)',
+						    500: ({ opacityValue }) => opacityValue ? `oklch(0.55 0.12 310/ ${opacityValue})` : 'oklch(0.55 0.12 310)',
+						    600: ({ opacityValue }) => opacityValue ? `oklch(0.47 0.10 310/ ${opacityValue})` : 'oklch(0.47 0.10 310)',
+						    700: ({ opacityValue }) => opacityValue ? `oklch(0.40 0.08 311/ ${opacityValue})` : 'oklch(0.40 0.08 311)',
+						    800: ({ opacityValue }) => opacityValue ? `oklch(0.32 0.06 309/ ${opacityValue})` : 'oklch(0.32 0.06 309)',
+						    900: ({ opacityValue }) => opacityValue ? `oklch(0.24 0.04 310/ ${opacityValue})` : 'oklch(0.24 0.04 310)',
+						    950: ({ opacityValue }) => opacityValue ? `oklch(0.15 0.02 310/ ${opacityValue})` : 'oklch(0.15 0.02 310)',
+						}
                     }
                 }
             }
@@ -1669,7 +1682,49 @@
                                         <p class="text-gray-400">You're a master of disrupting information for the town. Prioritize keeping investigative roles from gathering information.</p>
                                     </div>
                                 </div>
+								
+                                <div class="role-card p-4 rounded-lg bg-lavendar-900/20 border-lavendar-400">
+                                    <h4 class="text-xl font-bold text-lavendar-300 flex items-start sm:items-center flex-wrap sm:flex-nowrap mb-2">
+                                        Starsoawn
+                                        <span class="mt-1 sm:mt-0 sm:ml-2 text-xs font-medium bg-lavendar-500/20 text-lavendar-300 px-2 py-0.5 rounded-full">Neutral (Evil)</span>
+                                    </h4>
+                                    <p class="text-gray-400 italic mb-3">Fuck if I know what this is</p>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                        <div class="p-3 bg-lavendar-900/30 rounded-md sm:col-span-3">
+                                            <p class="font-semibold text-gray-200 mb-1">Goal:</p>
+                                            <p class="text-gray-400">Live to see Town lose the game.</p>
+                                        </div>
+                                        <div class="p-3 bg-lavendar-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Defense Level:</p>
+                                            <p class="text-gray-400">Basic (Barrier)</p>
+                                        </div>
+                                        <div class="p-3 bg-lavendar-900/30 rounded-md sm:col-span-2">
+                                            <p class="font-semibold text-gray-200 mb-1">Attack Power:</p>
+                                            <p class="text-gray-400">None</p>
+                                        </div>
+                                    </div>
 
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm mt-3">
+                                        <div class="p-3 bg-lavendar-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Night Action:</p>
+                                            <p class="text-gray-400">This role may choose to isolate a player each night. All visitors will be Starbound.</p>
+					    <p class="text-gray-400">- The Starspawn will know the roles of everyone who visited the target, but not who visited the target.</p>
+					    <p class="text-gray-400">- Being starbound roleblocks the victim. This will have a different message than a normal roleblock. Players immune to Starbound will know they were attempted Starbound.</p>
+					    <p class="text-gray-400">- Starbound does not affect direct attackers.</p>
+					    <p class="text-gray-400">- There can only be one Starspawn.</p>
+                                        </div>
+                                        <div class="p-3 bg-lavendar-900/30 rounded-md">
+                                            <p class="font-semibold text-gray-200 mb-1">Day Action:</p>
+                                            <p class="text-gray-400">Once per game, the Starspawn may choose to activate Daybreak, which will prevent all other players from using day abilities.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3 bg-lavendar-900/30 rounded-md mt-3">
+                                        <p class="font-semibold text-gray-200 mb-1">Strategy & Warning:</p>
+                                        <p class="text-gray-400">While disrupting the town is great, you can use your ability to find contradictions in people's claims in order to scout out potential allies. You work best in coordination with other evil players.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div id="NeutralKilling" class="sub-sub-tab-content p-3 border border-blue-700/50 rounded-lg bg-blue-900/10 space-y-4">
                                 

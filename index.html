@@ -326,6 +326,44 @@
 .neutral-card .info-content li::before {
     color: var(--info-bullet-color, var(--neutral-color, #fbbf24));
 }
+
+/* --- Mobile Fixes (Only affects screens smaller than 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 0.5rem; /* Reduce body padding to give more room to content */
+    }
+
+    .main-container {
+        padding: 15px; /* Shrink inner padding on small screens */
+    }
+
+    /* Allows Nav buttons and Faction tabs to wrap to new lines instead of pushing off-screen */
+    .main-nav, .tabs, .sub-filters, .role-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        flex: 1 1 40%; /* Allows buttons to sit 2-per-row on mobile */
+        font-size: 0.9rem;
+    }
+
+    /* Ensure long words or links break instead of stretching the card */
+    .role-card, .info-box, p, li {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    /* Centered stats often look better stacked or tightly packed on mobile */
+    .role-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller headers for small screens */
+    }
+}
   </style>
  </head>
  <body>

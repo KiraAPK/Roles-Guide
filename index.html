@@ -393,7 +393,7 @@
    <!-- ROLES PAGE -->
    <div class="page-content active" id="roles-page">
     <div class="tabs">
-     <button class="tablink active" onclick="openFaction(event, 'town-section')" style="color: var(--town-color)">
+     <button class="tablink active" onclick="openFaction(event, 'town-section')">
       Town
      </button>
      <button class="tablink" onclick="openFaction(event, 'mafia-section')" style="color: var(--mafia-color)">
@@ -3410,7 +3410,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
        </header>
        <p class="role-description">
-        A fucking simp.
+        A loyal lover who cares with all their heart.
        </p>
        <div class="role-stats">
         <div class="role-stat">
@@ -3948,7 +3948,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
        </header>
        <p class="role-description">
-        Fuck if I know what this is
+        A being blessed by the stars with the gift of hinderance and prevention.
        </p>
        <div class="role-stats">
         <div class="role-stat">
@@ -5851,23 +5851,27 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         .tag-special { border-color: #a855f7; color: #f3e8ff; }
 
         /* Specific Neutral Colors */
+        .n-amne { border-color: #06b6d4; color: #ecfeff; } /* Amnesiac */
+        .n-admirer { border-color: #60a5fa; color: #d9eaff; } /* Admirer */
         .n-ga { border-color: #ffffff; color: #ffffff; } /* Guardian Angel */
-        .n-jackal { border-color: #64748b; color: #cbd5e1; } /* Jackal */
-        .n-exe { border-color: #c0c0c0; color: #e5e5e5; } /* Executioner */
-        .n-ww { border-color: #94a3b8; color: #f1f5f9; } /* Werewolf */
-        .n-kitsune { border-color: #f472b6; color: #fdf2f8; } /* Kitsune */
-        .n-pb { border-color: #a3e635; color: #f7fee7; } /* Plaguebearer */
-        .n-arso { border-color: #ee9b00; color: #fff9db; } /* Arsonist */
-        .n-alc { border-color: #06b6d4; color: #ecfeff; } /* Alchemist */
+        .n-witch { border-color: #8b5cf6; color: #e8deff; } /* Witch */
+        .n-alc { border-color: #d946ef; color: #f9d4ff; } /* Alchemist */
+        .n-cl { border-color: #258a4b; color: #cef5dc; } /* Changeling */
+        .n-auditor { border-color: #d6bfa3; color: #faf0e3; } /* Auditor */
+        .n-starspawn { border-color: #b08fff; color: #ebe6ff; } /* Starspawn */
+        .n-kitsune { border-color: #fdba74; color: #ffecd9; } /* Kitsune */
         .n-sk { border-color: #3b82f6; color: #eff6ff; } /* Serial Killer */
-        .n-wendigo { border-color: #4b5563; color: #f3f4f6; } /* Wendigo */
-        .n-pirate { border-color: #ae8625; color: #fffbea; } /* Pirate */
-        .n-jester { border-color: #f97316; color: #fff7ed; } /* Jester */
-        .n-cl { border-color: #fb7185; color: #fff1f2; } /* Changeling */
-        .n-vamp { border-color: #7c3aed; color: #f5f3ff; } /* Vampire */
-        .n-moon { border-color: #d946ef; color: #fdf4ff; } /* Moonshiner */
-        .n-auditor { border-color: #9ca3af; color: #f9fafb; } /* Auditor */
-        .n-witch { border-color: #bf40bf; color: #fdf4ff; } /* Witch */
+        .n-arso { border-color: #ff9e0d; color: #ffe4cc; } /* Arsonist */
+        .n-ww { border-color: #b06638; color: #ffe6d6; } /* Werewolf */
+        .n-wendigo { border-color: #64748b; color: #dfe9f7; } /* Wendigo */
+        .n-jester { border-color: #f472b6; color: #ffe3f2; } /* Jester */
+        .n-exe { border-color: #c0c0c0; color: #e5e5e5; } /* Executioner */
+        .n-pirate { border-color: #facc15; color: #fff3c4; } /* Pirate */
+        .n-pb { border-color: #a3e635; color: #f7fee7; } /* Plaguebearer */
+        .n-jackal { border-color: #5c5c5c; color: #cbd5e1; } /* Jackal */
+        .n-cult { border-color: #e63975; color: #fcdce7; } /* Cultist */
+        .n-vamp { border-color: #4d7c0f; color: #e8ffc9; } /* Vampire */
+        .n-trans { border-color: #4ade80; color: #cfffe0; } /* Transporter */
      </style>
      <div class="results-grid">
       <!-- Bucket 1 -->
@@ -5922,14 +5926,14 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-town">
          Sheriff
         </span>
-        <span class="role-tag n-exe">
-         Executioner
+        <span class="role-tag n-admirer">
+         Admirer
         </span>
         <span class="role-tag n-ww">
          Werewolf
         </span>
-        <span class="role-tag tag-town">
-         Admirer
+        <span class="role-tag n-exe">
+         Executioner
         </span>
        </div>
       </div>
@@ -5942,10 +5946,10 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-town">
          Psychic
         </span>
-        <span class="role-tag tag-town">
+        <span class="role-tag n-amne">
          Amnesiac
         </span>
-        <span class="role-tag tag-special">
+        <span class="role-tag n-starspawn">
          Starspawn
         </span>
         <span class="role-tag n-kitsune">
@@ -6048,11 +6052,11 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-mafia">
          Ambusher
         </span>
-        <span class="role-tag n-pirate">
-         Pirate
-        </span>
         <span class="role-tag tag-mafia">
          Demolitionist
+        </span>
+        <span class="role-tag n-pirate">
+         Pirate
         </span>
        </div>
       </div>
@@ -6068,13 +6072,13 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-mafia">
          Disguiser
         </span>
-        <span class="role-tag n-jester">
-         Jester
-        </span>
         <span class="role-tag n-cl">
          Changeling
         </span>
-        <span class="role-tag tag-special">
+        <span class="role-tag n-jester">
+         Jester
+        </span>
+        <span class="role-tag n-cult">
          Cultist
         </span>
         <span class="role-tag n-vamp">
@@ -6091,13 +6095,13 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-town">
          Tavern Keeper
         </span>
-        <span class="role-tag n-moon">
+        <span class="role-tag tag-mafia">
          Moonshiner
         </span>
         <span class="role-tag n-auditor">
          Auditor
         </span>
-        <span class="role-tag tag-town">
+        <span class="role-tag n-trans">
          Transporter
         </span>
        </div>

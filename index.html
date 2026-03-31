@@ -250,8 +250,6 @@
             font-weight: bold;
             margin-bottom: 8px;
             display: block;
-            text-decoration: underline;
-            text-decoration-color: var(--title-color);
         }
 
         .info-content {
@@ -5775,6 +5773,76 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </li>
        </ul>
       </div>
+      <!-- Legion Strategy -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-top: 4px solid var(--legion-color); padding: 25px; border-radius: 8px;">
+       <h2 style="color: var(--legion-color); margin-top: 0; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">
+         😈
+        </span>
+        For ?????? Players
+       </h2>
+       <ul style="list-style: none; padding: 0; line-height: 1.6;">
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+          ???:
+         </strong>
+        Nomen domini nostri cognoscit et festinat alios certiores facere, sed nemo eum agnoscet, nec alter alterum.
+        </li>
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+          ???:
+         </strong>
+         Messias panem in duas partes dividit, et duo a potestate domini nostri intacta manent. Furor id sanabit.
+        </li>
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+          ???:
+         </strong>
+         Tribus diebus sufficiebant, et ritus perfectus erat. Dominus noster plenam potestatem attigit.
+        </li>
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+          ???:
+         </strong>
+         Non illuminati ulciscunt proditos suos, et Azazel interficitur. Sed corpus fidelissimi nostri ei tradetur, et iterum vivet.
+        </li>
+       </ul>
+      </div>
+      <!-- Neutral Strategy -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-top: 4px solid var(--neutral-color); padding: 25px; border-radius: 8px;">
+       <h2 style="color: var(--neutral-color); margin-top: 0; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">
+         🧩
+        </span>
+        For Neutral Players
+       </h2>
+       <ul style="list-style: none; padding: 0; line-height: 1.6;">
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+         Trust Nobody:
+         </strong>
+         No matter what you are, it's wise to give others as little intel about your true identity as neccesary. The town, mafia and even other neutrals may seek to take advantage or even get rid of you.
+        </li>
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+        Prioritize Yourself:
+         </strong>
+         As a neutral role, the only real ally you have is yourself. Don't be afraid to let others take the heat if it means you get to live another day.
+        </li>
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+         Balance Threats:
+         </strong>
+         Allowing one faction to prosper, especially as a solo killer, can quickly result in your downfall once players set their sights on you. Ensuring that no side has an advantage is the best way to avoid being overwhelmed.
+        </li>
+        <li style="margin-bottom: 15px;">
+         <strong style="color: #fff;">
+         Dealing with others:
+         </strong>
+         Depending on your role, other players may have goals that align with yours. Temporary alliances are great for achieving these goals, but beware of ulterior motive, and always have a backup plan if your new friend turns out to have other ideas.
+        </li>
+       </ul>
+      </div>
      </div>
      <!-- Status Effects Section -->
      <h2 style="color: var(--title-color); margin-bottom: 20px;">
@@ -5797,7 +5865,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
        <strong style="color: #fff;">
         Poisoned:
        </strong>
-       Will die at the end of the next night unless healed by a Doctor or Alchemist.
+       Will die at the end of the next night unless healed by a Doctor or Alchemist. The culprit counts as a direct attacker when applying poison.
       </div>
       <div style="background: var(--darkbar-bg); padding: 15px; border-radius: 6px; border-left: 3px solid #607d8b;">
        <strong style="color: #fff;">
@@ -5836,6 +5904,13 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
      </h2>
      <div style="background: var(--card-bg); padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); line-height: 1.7;">
       <p>
+       📝
+       <strong style="color: #fff;">
+        Death Notes:
+       </strong>
+       Most killers are able to add a note to the victim's body. The note will be displayed alongside the player's Last Will when deaths are announced.
+      </p>
+      <p>
        🛡️
        <strong style="color: #fff;">
         Barriers:
@@ -5854,7 +5929,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
        <strong style="color: #fff;">
         Attack/Defense Priority:
        </strong>
-       Basic beats Basic, Powerful beats Powerful, and Invincible beats Unstoppable.
+       Defense levels of same or higher strength as an attack level will save a player from death at night. Basic Defense > Basic Attack, Powerful Defense > Powerful Attack, Invincible Defense > Unstoppable Attack, and Democratic Execution > Invincible Defense.
       </p>
       <p>
        👼
@@ -6215,6 +6290,13 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
        </div>
       </div>
      </div>
+     <div class=style="background: var(--card-bg); padding: 25px; border-radius: 8px; border: 1px solid var(--border-color); line-height: 1.7;">
+        <span class="info-label">Sheriff's Investigative Results</span>
+            <ul class="info-content">
+                <li><strong>Innocent:</strong> Any Town role, Godfather (if they haven't killed that night), a Disguised Mafia member, most Neutral roles.</li>
+                <li><strong>Suspicious:</strong> Any Mafia role (including Godfather if they killed that night), Serial Killer (unless Cautious), Werewolf (on full moon nights), Vampires, any Framed player.</li>
+            </ul>
+      </div>
     </div>
    </div>
   </div>

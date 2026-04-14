@@ -398,7 +398,7 @@
       Mafia
      </button>
      <button class="tablink" onclick="openFaction(event, 'legion-section')" style="color: var(--legion-color)">
-      ??????
+      Legion
      </button>
      <button class="tablink" onclick="openFaction(event, 'neutral-section')" style="color: var(--neutral-color)">
       Neutral
@@ -959,6 +959,93 @@
         </ul>
        </div>
       </article>
+
+      <article class="role-card" data-alignment="Investigative">
+       <header class="role-header">
+        <h1>
+         Coroner
+        </h1>
+        <span class="alignment-pill">
+         Town (Investigative)
+        </span>
+       </header>
+       <p class="role-description">
+        A morgue worker that has decided to help with more than funeral preparations.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          None
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Lynch every criminal and evildoer.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           This role may examine a player for any evidence that matches their last Autopsy.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           This role may preform an autopsy on a corpse, learning the exact role of the killer. This works on indirect kills as well.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+          The Coroner cannot preform an autopsy on corpses of players who's roles have been hidden.
+         </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
+         </li>
+        </ul>
+       </div>
+      </article>
+
       <article class="role-card" data-alignment="Protective">
        <header class="role-header">
         <h1>
@@ -1319,6 +1406,110 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <ul class="info-content">
          <li>
           Be careful who you protect, as you could risk killing another protective role, or even an important investigative role. However, you are a far more reliable protector than a Bodyguard, as even if you can't kill every evil, you can continue to protect a player even after you have killed their attacker.
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card" data-alignment="Protective">
+       <header class="role-header">
+        <h1>
+         Baker
+        </h1>
+        <span class="alignment-pill">
+         Town (Protective)
+        </span>
+       </header>
+       <p class="role-description">
+        Feeder of the poor and unfortunate.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          None
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Lynch every criminal and evildoer.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           This role may choose to either bake 2 Biscuits, or 1 Loaf.
+          </li>
+          <li>
+            These can then be distributed. The reciever may choose to consume the pastry at any time.
+          </li>
+          <li>
+             Biscuits grant Basic Defense, while Loaves grant Powerful Defense.
+             </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           None.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+          The Baker starts the game with 2 Biscuits. 
+         </li>
+         <li>
+          The Baker cannot bake again until all pastries has been distributed.
+         </li>
+         <li>
+          Players may only have one pastry at a time. The Baker will know when a pastry was used, but not if the user was saved.
+         </li>
+         <li>
+          If pastry is distributed to a player who dies the same night, the pastry is lost.
+         </li>
+         <li>
+          The Baker cannot target themself.
+         </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
          </li>
         </ul>
        </div>
@@ -1698,6 +1889,102 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <ul class="info-content">
          <li>
           While you recieve no punishment for killing an innocent, you should still be careful, as accidentally killing an innocent could result in the Town's loss, and you'll have to absorb another attack to kill again. Otherwise, you're essentially a protective role with a gun.
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card" data-alignment="Killing">
+       <header class="role-header">
+        <h1>
+         Avenger
+        </h1>
+        <span class="alignment-pill">
+         Town (Killing)
+        </span>
+       </header>
+       <p class="role-description">
+        A seeker of justice who uses their blade to balance the scales.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          Basic
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Lynch every criminal and evildoer.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           None.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           Twice per game, this role may target a player. An announcement will be made that if an innocent <b>Town</b> member is hanged, the target player will be dealt a basic attack.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+          If the Avenger kills an innocent town member, they will die the following night. (ANY
+          <b>
+           Town
+          </b>
+          role, NOT including Town Traitor/recruits.)
+         </li>
+         <li>
+           The attack is dealt immediately. The charge is used whether or not a Town member was hanged, the target had defense, etc.
+          </li>
+          <li>
+           There can only be one Avenger.
+          </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
          </li>
         </ul>
        </div>
@@ -2140,6 +2427,95 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <ul class="info-content">
          <li>
           Just because several players claimed to visit you doesn't mean they're lying. Paired with a Lookout, you can confirm that several players are infact innocent. You can also play like a veteran, baiting evil roles into killing you only to expose themselves.
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card" data-alignment="Support">
+       <header class="role-header">
+        <h1>
+         Priest
+        </h1>
+        <span class="alignment-pill">
+         Town (Support)
+        </span>
+       </header>
+       <p class="role-description">
+        Pure of heart, they'll purify all who cross their path.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="icon" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          None
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="icon" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Lynch every criminal and evildoer.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           This role may purge a player of all harmful status effects at night.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           None.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+          The Priest does NOT purge certain status effects (douses, plague, poison, etc.). (Check: Status Effects)
+         </li>
+         <li>
+          The Priest CAN stop converts (Vampire & Cultist).
+         </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
          </li>
         </ul>
        </div>
@@ -3254,37 +3630,41 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
      <div class="faction-container">
       <div class="section-header">
        <h1 style="color: var(--legion-color)">
-        The ????? Faction
+        The Legion Faction
        </h1>
        <p>
-        The ?????, like the Mafia, wins when everyone who would oppose them is dead. However, instead of coordinated deception &amp; infiltration, the ?????? operates on a ?????? role killing off townsfolk, while ?????? cause chaos and disruption. When the ?????? dies, the ?????? vote on who may become the new ??????. The new ?????? will become the same role as the previous ??????.
+        The Legion, like the Mafia, wins when everyone who would oppose them is dead. However, instead of coordinated deception &amp; infiltration, the Legion operates on a Demonic role killing off townsfolk, while minions cause chaos and disruption. When the Demon dies, the minions vote on who may become the new Demon. The new Demon will become the same role as the previous Demon.
        </p>
+	<article class="role-card legion-card" data-alignment="Demonic"><p class="role-description">
+        On Night 3, Demonic roles will evolve, gaining basic defense, a new ability and appearing Innocent to the Sheriff. There can only be one Demonic role at any time, and minions cannot exist without a Demon.
+       </p></article>
       </div>
       <div class="sub-filters" id="legion-filters" style="color: var(--legion-color)">
        <button class="filter-btn active" onclick="filterRoles(this, 'all', 'legion-section')">
         All
        </button>
        <button class="filter-btn" onclick="filterRoles(this, 'Disciple', 'legion-section')">
-        God
+        Disciple
        </button>
        <button class="filter-btn" onclick="filterRoles(this, 'Heretic', 'legion-section')">
-        Is
+        Heretic
        </button>
        <button class="filter-btn" onclick="filterRoles(this, 'Demonic', 'legion-section')">
-        Dead
+        Demonic
        </button>
       </div>
-      <article class="role-card legion-card" data-alignment="Demonic">
+
+      <article class="role-card legion-card" data-alignment="Disciple">
        <header class="role-header">
         <h1>
-         Placeholder
+         Necromancer
         </h1>
         <span class="alignment-pill">
-         ?????? (??????)
+         Legion (Disciple)
         </span>
        </header>
        <p class="role-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        A fanatic of death with a grudge against the town.
        </p>
        <div class="role-stats">
         <div class="role-stat">
@@ -3293,7 +3673,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
           <strong>
            Attack:
           </strong>
-          ???
+          None
          </span>
         </div>
         <div class="role-stat">
@@ -3302,7 +3682,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
           <strong>
            Defense:
           </strong>
-          ???
+          None
          </span>
         </div>
        </div>
@@ -3312,7 +3692,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
         <ul class="info-content">
          <li>
-          Kill everyone who would oppose the ??????.
+          Kill everyone who would oppose the Legion.
          </li>
         </ul>
        </div>
@@ -3323,7 +3703,10 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
          </span>
          <ul class="info-content">
           <li>
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+           This role can temporarily resurrect the corpse of a player and command the minion to use their ability on a target of the Necromancer’s choice.
+          </li>
+          <li>
+            The corpse can be used only once, and the Necromancer can only use corpses in the graveyard.
           </li>
          </ul>
         </div>
@@ -3333,7 +3716,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
          </span>
          <ul class="info-content">
           <li>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            None.
           </li>
          </ul>
         </div>
@@ -3344,7 +3727,16 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
         <ul class="info-content">
          <li>
-           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+           Corpses with hidden roles cannot be used.
+	 </li>
+         <li>
+           Forged dead players may be used, if forged as a usable role. The original ability will be used, not the ability of the role they were forged as.
+	 </li>
+         <li>
+           The Necromancer cannot be roleblocked or controlled.
+	 </li>
+         <li>
+           There can only be one Necromancer.
 	 </li>
         </ul>
        </div>
@@ -3354,7 +3746,457 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
         <ul class="info-content">
          <li>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          TBA
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card legion-card" data-alignment="Disciple">
+       <header class="role-header">
+        <h1>
+         Voodooist
+        </h1>
+        <span class="alignment-pill">
+         Legion (Disciple)
+        </span>
+       </header>
+       <p class="role-description">
+        A silencer of feeble minded victims.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          None
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Kill everyone who would oppose the Legion.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           Once per game, this role may corrupt the town the following day, making the senders and receivers of the whispers anonymous.
+          </li>
+          <li>
+            All Votes become anonymous for that day as well.
+            </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+            The Voodooist may read private whispers.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+          <li>
+            Whisper-reading roles, INCLUDING the Voodooist, are affected by corruption.
+          </li>
+         <li>
+           There can only be one Voodooist.
+	 </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card legion-card" data-alignment="Heretic">
+       <header class="role-header">
+        <h1>
+         Sorcerer
+        </h1>
+        <span class="alignment-pill">
+         Legion (Heretic)
+        </span>
+       </header>
+       <p class="role-description">
+        The artisan of nightmares.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          None
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Kill everyone who would oppose the Legion.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           None.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+            This role may choose a player to entrap in nightmares. The target will be informed that a Sorcerer has put them to sleep and will be unable to perform any night abilities. This counts as a roleblock and thus roleblock-immune roles are not affected. The roleblock operates indirectly (ASTRAL).
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+           If a player with a night chat is nightmared, they lose the ability to speak.
+	 </li>
+         <li>
+           If the Jailor/Kidnapper is nightmared, they lose te ability to execute that night, but will still imprison and speak to the target. If the target is jailed then ability will fail and the target will not know about the attempt.
+	 </li>
+         <li>
+           The Sorcerer cannot be roleblocked.
+	 </li>
+         <li>
+           There can only be one Sorcerer.
+	 </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card legion-card" data-alignment="Heretic">
+       <header class="role-header">
+        <h1>
+         Berserker
+        </h1>
+        <span class="alignment-pill">
+         Legion (Heretic)
+        </span>
+       </header>
+       <p class="role-description">
+        A war chief gone mad.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          None
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Kill everyone who would oppose the Legion.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           None.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+            One per game, this role may activate a Frenzy, granting the Demonic role Unstoppable Attack for that night.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+           There can only be one Berserker.
+	 </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
+         </li>
+        </ul>
+       </div>
+      </article>
+
+      <article class="role-card legion-card" data-alignment="Demonic">
+       <header class="role-header">
+        <h1>
+         Leviathan
+        </h1>
+        <span class="alignment-pill">
+         Legion (Demonic)
+        </span>
+       </header>
+       <p class="role-description">
+        A demon so envious of the capabilities of others.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          Basic
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None (Basic)
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Kill everyone who would oppose the Legion.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           This role may attack a player each night.
+          </li>
+          <li>
+           Upon evolving, the Leviathan will appear to be the role of the last player they killed. This is applied immediately upon killing a player and will fool Investigators, Sheriffs, Psychics and Consiglieres.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+            None.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+           There can only be one Demonic role at any given time.
+	 </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
+         </li>
+        </ul>
+       </div>
+      </article>
+      <article class="role-card legion-card" data-alignment="Demonic">
+       <header class="role-header">
+        <h1>
+         Azazel
+        </h1>
+        <span class="alignment-pill">
+         Legion (Demonic)
+        </span>
+       </header>
+       <p class="role-description">
+        The scapegoat, now no longer powerless.
+       </p>
+       <div class="role-stats">
+        <div class="role-stat">
+         <img alt="Attack" src="https://img.icons8.com/ios-filled/50/ffffff/sword.png"/>
+         <span>
+          <strong>
+           Attack:
+          </strong>
+          Basic
+         </span>
+        </div>
+        <div class="role-stat">
+         <img alt="Defense" src="https://img.icons8.com/ios-filled/50/ffffff/shield.png"/>
+         <span>
+          <strong>
+           Defense:
+          </strong>
+          None (Basic)
+         </span>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Goal:
+        </span>
+        <ul class="info-content">
+         <li>
+          Kill everyone who would oppose the Legion.
+         </li>
+        </ul>
+       </div>
+       <div class="ability-grid">
+        <div class="info-box">
+         <span class="info-label">
+          Night Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+           This role may attack a player each night.
+          </li>
+          <li>
+           Upon evolving, this role may also redirect all visits on them to another player. Both abilities can be used at the same time.
+          </li>
+         </ul>
+        </div>
+        <div class="info-box">
+         <span class="info-label">
+          Day Ability:
+         </span>
+         <ul class="info-content">
+          <li>
+            None.
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Attributes:
+        </span>
+        <ul class="info-content">
+         <li>
+           There can only be one Demonic role at any given time.
+	 </li>
+        </ul>
+       </div>
+       <div class="info-box">
+        <span class="info-label">
+         Strategy:
+        </span>
+        <ul class="info-content">
+         <li>
+          TBA
          </li>
         </ul>
        </div>
@@ -4925,7 +5767,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
         <ul class="info-content">
          <li>
-          The Plaguebearer will know which players infected who at night and how.
+          The Plaguebearer will know which players infected who at night and how. The Plaguebearer will NOT get a notification for an already-infected target getting re-infected.
          </li>
          <li>
           There may only be one Plaguebearer.
@@ -5779,7 +6621,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span style="margin-right: 10px;">
          😈
         </span>
-        For ?????? Players
+        For Legion Players
        </h2>
        <ul style="list-style: none; padding: 0; line-height: 1.6;">
         <li style="margin-bottom: 15px;">
@@ -5897,6 +6739,19 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
        </strong>
        If roleblocked by a Tavern Keeper, you cannot be roleblocked by them again the following night.
       </div>
+      <div style="background: var(--darkbar-bg); padding: 15px; border-radius: 6px; border-left: 3px solid #3f51b5;">
+       <strong style="color: #fff;">
+        Nightmare:
+       </strong>
+       Unable to speak to teammates or perform any night abilities. Counts as a roleblock, thus roleblock-immune roles bypass this.
+      </div>
+    <div style="background: var(--darkbar-bg); padding: 15px; border-radius: 6px; border-left: 3px solid #607d8b;">
+       <strong style="color: #fff;">
+        Frenzied:
+       </strong>
+       Attack level upgraded to Unstoppable. Currently only applicable to Demonic roles.
+      </div>
+      PRIEST PURGES: Blackmailed, Roleblocked, Possessed, Frames, Disguises
      </div>
      <!-- Mechanics / Gimmicks -->
      <h2 style="color: var(--title-color); margin-bottom: 20px;">
@@ -6011,6 +6866,7 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         /* Alignment Defaults */
         .tag-town { border-color: var(--town-color); color: #e2ffd6; }
         .tag-mafia { border-color: var(--mafia-color); color: #ffd6d6; }
+        .tag-legion { border-color: var(--legion-color); color: #ffd6d6; }
         .tag-special { border-color: #a855f7; color: #f3e8ff; }
 
         /* Specific Neutral Colors */
@@ -6055,6 +6911,9 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-mafia">
          Blackmailer
         </span>
+		<span class="role-tag tag-legion">
+         Voodooist
+        </span>
        </div>
       </div>
       <!-- Bucket 2 -->
@@ -6089,6 +6948,12 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-town">
          Sheriff
         </span>
+        <span class="role-tag tag-town">
+         Coroner
+        </span>
+		<span class="role-tag tag-legion">
+         Leviathan
+        </span>
         <span class="role-tag n-admirer">
          Admirer
         </span>
@@ -6108,6 +6973,12 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
        <div class="result-content">
         <span class="role-tag tag-town">
          Psychic
+        </span>
+        <span class="role-tag tag-town">
+         Avenger
+        </span>
+		<span class="role-tag tag-legion">
+         Sorcerer
         </span>
         <span class="role-tag n-amne">
          Amnesiac
@@ -6135,6 +7006,9 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-mafia">
          Agent
         </span>
+		<span class="role-tag tag-legion">
+         Azazel
+        </span>
         <span class="role-tag n-pb">
          Plaguebearer
         </span>
@@ -6155,6 +7029,9 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-mafia">
          Godfather
         </span>
+		<span class="role-tag tag-legion">
+         Berserker
+        </span>
         <span class="role-tag n-arso">
          Arsonist
         </span>
@@ -6168,6 +7045,9 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
        <div class="result-content">
         <span class="role-tag tag-town">
          Doctor
+        </span>
+		<span class="role-tag tag-town">
+         Coroner
         </span>
         <span class="role-tag tag-mafia">
          Hypnotist
@@ -6258,6 +7138,9 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         <span class="role-tag tag-town">
          Tavern Keeper
         </span>
+        <span class="role-tag tag-town">
+         Priest
+        </span>
         <span class="role-tag tag-mafia">
          Moonshiner
         </span>
@@ -6283,6 +7166,9 @@ Since you can protect yourself, you're a high-risk target for many evil roles, a
         </span>
         <span class="role-tag tag-mafia">
          Janitor
+        </span>
+        <span class="role-tag tag-legion">
+         Necromancer
         </span>
         <span class="role-tag n-witch">
          Witch
